@@ -47,7 +47,13 @@
             </div>
             <div class="input-wrapper">
               <label for="pwd">Password:</label>
-              <input type="password" name="pwd" id="pwd" required />
+              <input
+                type="password"
+                name="pwd"
+                id="pwd"
+                minlength="6"
+                required
+              />
               <div class="error-msg"></div>
             </div>
             <div class="input-wrapper">
@@ -60,7 +66,9 @@
           <button type="submit" form="my-form" class="submit-btn">
             Create account
           </button>
-          <div>Already have an account? <a class="login"> Log in!</a></div>
+          <div>
+            Already have an account? <a href="#" class="login"> Log in!</a>
+          </div>
         </div>
         <div class="footer">
           Copyrights© JanusZhu |
