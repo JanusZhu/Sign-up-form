@@ -62,8 +62,9 @@ body {
 .credit {
   position: absolute;
   bottom: 0px;
-  right: 5px;
-  color: rgba(250, 246, 246, 0.631);
+  left: 0px;
+  font-size: x-small;
+  color: rgba(237, 237, 237, 0.631);
   font-family: customFont2;
 }
 .content {
@@ -154,4 +155,10 @@ input:focus {
 
 .login {
   color: rgb(40, 141, 107);
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
