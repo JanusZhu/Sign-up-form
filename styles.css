@@ -14,7 +14,6 @@ body {
   margin: 0px;
   padding: 0px;
   border: 0px;
-  overflow: hidden;
 }
 .main {
   display: flex;
@@ -68,6 +67,7 @@ body {
   font-family: customFont2;
 }
 .content {
+  position: relative;
   width: 60%;
   height: 100%;
   display: flex;
@@ -78,7 +78,7 @@ body {
 
 .top {
   padding: 0 5%;
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-weight: 600;
 }
 
@@ -86,7 +86,6 @@ body {
   background-color: white;
   box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
   padding: 0 5%;
-  height: 40%;
 }
 form {
   display: flex;
@@ -132,6 +131,7 @@ input {
   color: aliceblue;
   border: none;
   margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 input:focus {
@@ -158,7 +158,38 @@ input:focus {
 }
 
 .footer {
+  font-size: x-small;
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 1%;
+  right: 1%;
+}
+
+@media (max-width: 800px) {
+  html,
+  body {
+    overflow: auto;
+  }
+  .main {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+    height: auto;
+  }
+  .footer {
+    position: static;
+    padding: 5%;
+  }
+  .input-wrapper {
+    width: 90%;
+  }
+  .top {
+    margin-top: 20px;
+  }
+  .icon {
+    margin-top: 20px;
+  }
 }
