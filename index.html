@@ -1,0 +1,85 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="sidebar">
+        <div class="icon">
+          <img src="./images/odin-lined.png" alt="The Odin Project Logo" />
+          <h1>Sign-up Form</h1>
+        </div>
+        <div class="credit">Photo by Ralph Kayden on Unsplash</div>
+      </div>
+      <div class="content">
+        <div class="top">
+          <div class="header">
+            <p>
+              This is not a real online service! You know you need something
+              like this in your life to help you realize your deepest dreams.
+              Sign up <em>now</em>&ensp;to get started.
+            </p>
+            <p>You <em>know</em>&ensp;you want to.</p>
+          </div>
+        </div>
+        <div class="middle">
+          <p>Let's do this!</p>
+          <form id="my-form">
+            <div class="input-wrapper">
+              <label for="firstname">First Name: </label>
+              <input type="text" name="firstname" id="firstname" required />
+            </div>
+            <div class="input-wrapper">
+              <label for="lastname">Last Name: </label>
+              <input type="text" name="lastname" id="lastname" required />
+            </div>
+            <div class="input-wrapper">
+              <label for="email">Email: </label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="input-wrapper">
+              <label for="phone">Phone number:</label>
+              <input type="tel" name="phone" id="phone" required />
+            </div>
+            <div class="input-wrapper">
+              <label for="pwd">Password:</label>
+              <input type="password" name="pwd" id="pwd" required />
+              <div class="error-msg"></div>
+            </div>
+            <div class="input-wrapper">
+              <label for="cpwd">Confirm password:</label>
+              <input type="password" name="cpwd" id="cpwd" required />
+            </div>
+          </form>
+        </div>
+        <div class="bottom">
+          <button type="submit" form="my-form" class="submit-btn">
+            Create account
+          </button>
+          <div>Already have an account? <a class="login"> Log in!</a></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const pwd = document.querySelector("#pwd");
+      const cpwd = document.querySelector("#cpwd");
+      const pwderror = document.querySelector(".error-msg");
+
+      cpwd.addEventListener("input", (e) => {
+        if (cpwd.value !== pwd.value) {
+          pwderror.textContent = "*Passwords do not match";
+          pwd.className = "error";
+          cpwd.className = "error";
+        } else {
+          pwderror.textContent = "";
+          pwd.className = "";
+          cpwd.className = "";
+        }
+      });
+    </script>
+  </body>
+</html>
