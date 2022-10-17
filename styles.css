@@ -85,8 +85,7 @@ body {
 .middle {
   background-color: white;
   box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
-  padding: 0 5%;
-  height: 40%;
+  padding: 30px 5%;
 }
 
 form {
@@ -100,7 +99,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 40%;
-  height: 100%;
+  height: 50px;
   padding: 5px 0;
   margin: 5px 10px 5px 0;
 }
@@ -111,6 +110,7 @@ form {
   font-family: customFont2;
   font-weight: 400;
   color: rgba(81, 81, 81, 0.84);
+  position: relative;
 }
 
 input {
@@ -154,7 +154,7 @@ input:focus {
 .error-msg {
   font-size: smaller;
   font-weight: 400;
-  color: rgb(226, 17, 59);
+  color: #e2113b;
   margin-top: 5px;
 }
 
@@ -173,6 +173,7 @@ input:focus {
   html,
   body {
     overflow: auto;
+    font-size: small;
   }
   .main {
     flex-direction: column;
@@ -196,5 +197,10 @@ input:focus {
   }
   .icon {
     margin-top: 20px;
+  }
+  form {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 40px;
   }
 }

@@ -92,6 +92,17 @@
           cpwd.className = "";
         }
       });
+
+      pwd.addEventListener("input", (e) => {
+        if (pwd.value.length < 6) {
+          pwderror.textContent =
+            "*Password must be longer or equal to 6 digits.";
+          pwd.className = "error";
+        } else {
+          pwderror.textContent = "";
+          pwd.className = "";
+        }
+      });
     </script>
   </body>
 </html>
